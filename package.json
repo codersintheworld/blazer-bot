@@ -1,8 +1,11 @@
 {
   "name": "blazer-bot",
   "version": "1.0.0",
-  "description": "All in one discord bot via Android mobile setup",
+  "description": "Discord captcha bot",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "discord.js": "^14.14.1"
   }
