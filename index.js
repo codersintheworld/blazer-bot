@@ -9,12 +9,12 @@ const client = new Client({
     ]
 });
 
-// CONFIGURATION (Change these values)
-const VERIFIED_ROLE_ID = '1479598194122948670'; // Put your server role ID here
-const TOKEN = process.env.DISCORD_TOKEN;
+// ⚙️ CONFIGURATION 
+const VERIFIED_ROLE_ID = '1479598194122948670'; // Replace with your real Role ID number
+const TOKEN = process.env.DISCORD_TOKEN;       // Leave this exactly as it is!
 
 function generateCaptchaCode() {
-    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; 
     let result = '';
     for (let i = 0; i < 5; i++) {
         result += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -23,7 +23,7 @@ function generateCaptchaCode() {
 }
 
 client.once('ready', () => {
-    console.log(`🔥 Blazer Bot is online! Running via Termux node setup as ${client.user.tag}`);
+    console.log(`🔥 Blazer Bot is online and running! Tag: ${client.user.tag}`);
 });
 
 client.on('messageCreate', async (message) => {
@@ -85,13 +85,6 @@ client.on('interactionCreate', async (interaction) => {
                 }
             } else {
                 await interaction.reply({ content: '❌ **Wrong code!** Click the verification button again to fetch a fresh security code.', ephemeral: true });
-            }
-        }
-    }
-});
-
-client.login(TOKEN);
-security code.', ephemeral: true });
             }
         }
     }
