@@ -1,0 +1,9 @@
+{
+  "name": "blazer-bot",
+  "version": "1.0.0",
+  "description": "All in one discord bot via Android mobile setup",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^14.14.1"
+  }
+}
