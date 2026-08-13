@@ -11,7 +11,7 @@ const client = new Client({
 
 // ⚙️ CONFIGURATION 
 const VERIFIED_ROLE_ID = '1479598194122948670'; // Replace with your real Role ID number
-const TOKEN = process.env.DISCORD_TOKEN;       // Leave this exactly as it is!
+const TOKEN = process.env.BOT_TOKEN_NEW;       // Leave this exactly as it is!
 
 function generateCaptchaCode() {
     const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; 
