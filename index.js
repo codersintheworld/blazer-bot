@@ -91,3 +91,16 @@ client.on('interactionCreate', async (interaction) => {
 });
 
 client.login(TOKEN);
+
+// Dummy server to pass Render port scan checks
+const http = require('http');
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Blazer Bot Running Safely\n');
+});
+
+// Render automatically passes a PORT variable. If missing, it defaults to 3000
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+    console.log(`📡 Internal web server is actively listening on port ${PORT}`);
+});
